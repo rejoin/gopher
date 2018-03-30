@@ -1,0 +1,602 @@
+
+
+/*Layout *****************************************/
+body {
+	background-image: url('website_background2.jpg');
+	background-attachment: fixed;
+	background-size: cover;
+	font-family: 'Varela Round',Verdana;
+	zoom: 90%;
+ }
+
+#container {
+	width: 100%;
+	min-height: 100%;
+ }
+
+#main_body {
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	color: #fff;
+	margin-bottom: 50px;
+	padding: 10px;
+	border-radius: 5px 5px 5px 5px;
+	display: block;
+ }
+
+#logo {
+	margin-left: 9%;
+	padding: 5px;
+ }
+
+#page_title {
+	margin: 0 0 20px 10px;
+	width: 980px;
+	text-decoration: none;
+	font-size: 30px;
+	color: white;
+	padding: 2px 10px 0px 20px;
+	text-shadow: 1px 1px #444;
+ }
+
+/*Navigation bar*****************************************/
+nav {
+	margin-bottom: 50px;
+	box-shadow: 3px 3px 3px #000;
+	min-width: 1057px;
+	width: 100%;
+	background-image: url('navtext.png');
+	background-size: 2000px 45px;
+ }
+
+	nav ul {
+		font-family: 'Varela Round',Verdana;
+		font-size: 20px;
+		line-height: 30px;
+		width: 1057px;
+		position: relative;
+		margin: auto;
+		margin-left: auto;
+		text-align: center;
+		padding: 0;
+		list-style: none;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	 }
+
+	nav #navigation li {
+		display: inline-block; /*Centers and puts inline*/
+		list-style-type: none;
+		font-weight: bold;
+		padding: 0px 25px;
+		padding-bottom: 1px;
+		position: relative;
+		border-right: ridge #50A6C2;
+		border-width: 0.1em;
+		border-collapse: collapse;
+		margin-left: -6px;
+		margin-top: 2px;
+	 }
+
+	nav ul li a {
+		text-decoration: none; /*text on navbar*/
+		padding: 7px 15px 3px 15px;
+		color: #FFF;
+		text-align: center;
+		text-shadow: 0 -1px 0 #000;
+	 }
+
+#home {
+	border-left: ridge #50A6C2;
+	border-width: 0.1em;
+ }
+
+/*Index Page********************************************/
+#scroll_title {text-align: center;}
+
+.home_table td {
+	width: 87px;
+	text-align: center;
+ }
+
+.home_table {
+	border-radius: 0px 0px 15px 15px;
+	padding: 5px;
+	width: 600px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	float: left;
+ }
+
+	.home_table td {padding: 5px;}
+
+		.home_table td a {
+			text-decoration: none;
+			color: #fff;
+		 }
+
+.home_cover {
+	height: 175px;
+	width: 125px;
+ }
+
+.home_title {
+	width: 175px;
+	height: 70px;
+	text-align: center;
+ }
+
+#f_films {height: 1000px;}
+
+#home_button {
+	padding: 10px 10px 11px;
+	font-size: 14px;
+	background-color: #fff;
+	color: #236B8E;
+	border-radius: 5px;
+	box-shadow: 2px 2px 3px #000;
+ }
+
+	#home_button a {color: #236B8E;}
+
+#phone_number {
+	font-size: 20px;
+	padding: 10px;
+ }
+
+#table_title {
+	padding: 10px 10px 11px;
+	font-size: 20px;
+	background-color: #fff;
+	color: #236B8E;
+	border-radius: 5px;
+	box-shadow: 2px 2px 3px #000;
+	text-align: left;
+ }
+
+#News {
+	background-size: cover;
+	background-image: url('news.png');
+	margin-top: 10px;
+	width: 500px;
+	background-color: #080808;
+	float: right;
+	border-radius: 15px 15px 15px 15px;
+	padding: 10px;
+	margin-bottom: 50px;
+ }
+
+#News_table td {
+	color: #fff;
+	padding: 10px;
+	border-bottom: solid;
+	border-collapse: collapse;
+	border-right: none;
+	border-width: 2px;
+	border-color: #555555;
+ }
+
+#offers {
+	margin-bottom: 50px;
+	padding: 10px;
+	width: 80%%;
+	margin-left: auto;
+	margin-right: auto;
+ }
+
+#popcorn {height: 200px;}
+
+#hungry {height: 250px;}
+
+#hotdog {height: 200px;}
+
+/*Seating***************************************/
+#seating input[type=checkbox] {display: none;}
+
+#seating  input[type=checkbox]+label {
+	background: url('/static/seat_empty.png');
+	height: 50px;
+	width: 50px;
+	display: inline-block;
+ }
+
+#seating input[type=checkbox]:checked+label {
+	background: url('/static/seat_full.png');
+	height: 50px;
+	width: 50px;
+	display: inline-block;
+ }
+
+#seating  input[type=checkbox]:checked+label:hover {
+	background: url('/static/seat_full_hover.png');
+	height: 50px;
+	width: 50px;
+ }
+
+#seating  input[type=checkbox]+label:hover {
+	background: url('/static/seat_empty_hover.png');
+	height: 50px;
+ }
+
+#seating {
+	float: left;
+	margin-top: 20px;
+	margin-left: 20px;
+ }
+
+	#seating td {
+		padding-right: 7px;
+		color: #50A6C2;
+	 }
+
+	#seating label {
+		color: #FFF;
+		font-size: 0.9em;
+		text-align: right;
+	 }
+
+#booking_heading {
+	font-weight: bold;
+	padding-top: 20px;
+ }
+
+/* Sidebar ***************************/
+#sidebar {
+	background-color: #222;
+	float: right;
+	margin-top: 20px;
+	margin-right: 20px;
+	width: 400px;
+	margin-bottom: 20px;
+	border-radius: 15px 15px 15px 15px;
+	box-shadow: 5px 5px 5px #000;
+	padding-bottom: 20px;
+ }
+
+	#sidebar li {
+		list-style: none;
+		padding-bottom: 20px;
+		padding-top: 20px;
+		font-size: 20px;
+		border-bottom: solid 1px;
+		margin-right: 35px;
+	 }
+
+#pay_button {border-bottom: none !important;}
+
+/*Login****************************************/
+#user {
+	float: left
+	margin-left: 70%;
+	padding: 10px;
+	display: none;
+	font-size: 20px;
+	color: white;
+	font-family: Russo One,Verdana;
+	background: none;
+ }
+
+	#user p {padding: 5px;}
+
+	#user input {
+		margin: 0;
+		padding: 5px;
+	 }
+
+	#user a {
+		text-decoration: none;
+		color: #50A6C2;
+	 }
+
+.log_b {
+  margin-top:10px;
+	padding: 10px 10px 11px;
+	font-size: 14px;
+	background-color: #50a6c2;
+	font-weight: bold;
+	text-shadow: 1px 1px #444;
+	color: #fff;
+	border-radius: 5px;
+	box-shadow: 1px 1px 2px #CCC;
+ }
+
+#sign_div {
+	float: right;
+	padding: 20px;
+ }
+
+/*Footer Stuff **********************************************/
+footer {
+	clear: both;
+	position: static;
+	z-index: 10;
+	background: #000;
+	height: 3em;
+	text-align: center;
+	width: 100%;
+	padding-top: 15px;
+	color: #FFF;
+ }
+
+* {margin: 0;}
+
+html,body {height: 100%;}
+
+/*Film table****************************************************/
+.cover {
+	width: 150px;
+	height: 200px;
+	padding-left: 20px;
+ }
+ 
+ .rating_pic  img{
+ width:24px;
+ height:24px;
+ }
+
+#film th {text-align: center;}
+
+#film td {
+	width: 10%;
+	text-align: left;
+	padding-right: 15px;
+ }
+
+tr.rowBorder {
+	display: block;
+	list-style: none;
+	border-bottom-style: solid;
+	border-color: #fff;
+	border-width: 1px;
+ }
+
+#films_table li {
+	list-style: none;
+	padding: 5px;
+	font-size: 14px;
+ }
+
+#films_table a {
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: none;
+ }
+
+#films_table {
+	background-color: #080808;
+	color: #fff;
+	border-bottom: none;
+	border-radius: 15px 15px 15px 15px;
+	box-shadow: 5px 5px 5px #000;
+	padding-bottom: 25px;
+	padding-top: 15px;
+	width: 60%;
+ }
+
+	#films_table p {font-weight: bold;}
+
+#filtering {
+	width: 35%;
+	float: right;
+	padding: 10px;
+	border-radius: 15px 15px 15px 15px;
+ }
+
+#sort_label {}
+
+input[type="radio"] {margin-bottom: 10px;}
+
+.action_primary {
+	padding: 10px 10px 11px;
+	font-size: 14px;
+	background-color: #fff;
+	color: #236B8E;
+	border-radius: 5px;
+	box-shadow: 2px 2px 3px #000;
+ }
+
+/*Price table ***************************************************/
+#ticket_price {
+	width: 50%;
+	border-radius: 15px 15px 15px 15px;
+	margin-bottom: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px 10px 11px;
+	background-size: cover;
+	background-image: url('news.png');
+	font-weight: bold;
+	text-shadow: 1px 1px #444;
+	color: #fff;
+	border-radius: 5px;
+	box-shadow: 1px 1px 5px #CCC;
+	box-shadow: inset 0 0 15px 4px #fff;
+ }
+
+#food_price {
+	width: 60%;
+	border-radius: 15px 15px 15px 15px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px 10px 11px;
+	background-color: #000;
+	font-weight: bold;
+	text-shadow: 1px 1px #444;
+	color: #fff;
+	border-radius: 5px;
+	box-shadow: 1px 1px 5px #CCC;
+	box-shadow: inset 0 0 15px 4px #fff;
+ }
+
+table.t_price {
+	border-collapse: collapse;
+	border-radius: 25px;
+	font-size: 20px;
+	color: #FFF;
+	margin-left: 10px;
+	height: 350px;
+	padding-bottom: 10px;
+ }
+
+.t_price td {
+	color: #fff;
+	padding: 10px;
+	border: solid;
+	border-radius: 25px;
+	border-collapse: collapse;
+	border-width: 2px;
+ }
+
+.t_price th {padding-right: 125px;}
+
+/* Film Info page***************************/
+.back_button {
+	background-color: #50a6c2;
+	width: 80px;
+	padding: 10px 10px 11px;
+	border-radius: 5px;
+	margin-bottom: 50px;
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;
+ }
+
+.time_button {
+	width: 210px;
+	padding: 10px 10px 11px;
+	font-size: 12px;
+	background-color: #50a6c2;
+	font-weight: bold;
+	text-shadow: 1px 1px #444;
+	border-radius: 5px;
+	box-shadow: 1px 1px 2px #CCC;
+	float: left;
+	margin-bottom: 10px;
+	text-decoration: none;
+	color: #fff;
+	text-align:center;
+ }
+
+#image_div {
+	height: 100%;
+	position: static;
+	float: left;
+	width: 450px;
+	margin-right: 20px;
+ }
+
+#big_cover {
+	height: 600px;
+	width: 450px;
+ }
+
+#plot {
+	text-align: left;
+	float: left;
+	margin: 0;
+	font-size: 14px;
+	width: 500px;
+	height: 300px;
+	margin-top: 20px;
+ }
+
+.film_info {
+	margin-top: 50px;
+	list-style-type: none;
+	position: relative;
+	width: 60%;
+ }
+
+	.film_info li {padding-bottom: 5px;}
+
+#film_details {
+	background-color: #080808;
+	height: 600px;
+	width: 1100px;
+	padding: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 15px 15px 15px 15px;
+ }
+
+/* Banner *********************************/
+.banner {
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: auto;
+ }
+
+	.banner li {list-style: none;}
+
+	.banner ul li {float: left;}
+
+	.banner img {
+		width: 95%;
+		height: 400px;
+		margin: 0;
+		border-radius: 10px 10px 10px 10px;
+	 }
+
+/* Form Payment/ Register ***********************/
+.register {margin-left: 60px;}
+
+.reg_box {
+	border-radius: 10px 10px 10px 10px;
+	border-color: #50A6C2;
+	padding: 4px;
+	margin-left: 50px;
+	width: 300px;
+ }
+
+.reg_short {
+	width: 60px;
+	border-radius: 10px 10px 10px 10px;
+	border-color: #50A6C2;
+	padding: 4px;
+	margin-left: 50px;
+ }
+
+.paymentHeader {
+	text-decoration: bold;
+	font-size: 24px;
+	color: #50A6C2;
+	padding: 10px;
+ }
+
+#paymentForm {
+	float: left;
+	margin-top: 20px;
+	margin-left: 20px;
+ }
+
+	#paymentForm label,.label {padding-left: 50px;}
+	
+/************Tickets Page********************************************/
+#ticket_table {float: left;}
+
+	#ticket_table td {
+		padding: 10px;
+		font-size: 30px;
+	 }
+
+
+	#ticket_table thead th{
+		font-size: 35px;
+		padding-right: 15px;
+		text-decoration: bold;
+	 }
+
+.log_b:disabled {
+	background-color: #444;
+	color: #666;
+ }
+
+#ticket_table select {
+	border-radius: 10px 10px 10px 10px;
+	border-color: #50A6C2;
+	padding: 4px;
+ }
+

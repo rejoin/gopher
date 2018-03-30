@@ -1,0 +1,152 @@
+{%include 'header.html' %}
+       <div class="banner">
+			<ul>
+				<li>
+					<p> <a href="/film?imdbid=416449"> <img class="banner_cover" src= "/static/GopherSlideTwo.png" alt="slide 2 of banner"/></a> </p>
+				</li>
+				<li>
+					<p><a href="/film?imdbid=80684"> <img class="banner_cover" src= "/static/GopherSlideOne.png" alt="slide 1 of banner"/></a> </p>
+				</li>
+				<li>
+					<p><a href="/film?imdbid=1853728" ><img class="banner_cover" src= "/static/GopherSlideThree.png" alt="slide 3 of banner"/></a> </p>
+				</li>
+				<li>
+					<p><a href="/film?imdbid=1490017" ><img class="banner_cover" src= "/static/GopherSlideFour.png" alt="slide 4 of banner"/></a> </p>
+				</li>
+			</ul>
+		</div>
+		
+
+		
+    <div id="main_body">
+    
+ 
+        <table class="home_table">
+          <tr>
+             
+              <td colspan="3"><h2 id ="table_title">Top Films Showing at Gopher Films</h2></td>
+            
+          </tr>
+        
+          <tr>
+            {% for movie in films %}
+            <td>
+              <a href="/film?imdbid={{ movie.imdbid }}"><img class="home_cover" src= {{ movie.image }} alt="movie image"/></a>
+            </td> 
+             {% endfor %}
+          </tr>
+          <tr>
+           {% for movie in films %}
+          
+            <td>
+              <a href="/film?imdbid={{ movie.imdbid }}">{{ movie.title }}</a>
+            </td>
+              {% endfor %}
+          </tr>
+          
+          <tr>
+            {% for movie in last_films %}
+            <td>
+              <a href="/film?imdbid={{ movie.imdbid }}"><img class="home_cover" src={{ movie.image }} alt="movie image"/></a>
+            </td> 
+             {% endfor %}
+          </tr>
+          <tr>
+           {% for movie in last_films %}
+          
+            <td>
+              <a href="/film?imdbid={{ movie.imdbid }}">{{ movie.title }}</a>
+            </td>
+              {% endfor %}
+          </tr>
+          
+           <tr>
+            {% for movie in more_films %}
+            <td>
+             <a href="/film?imdbid={{ movie.imdbid }}"><img class="home_cover" src= {{ movie.image }} alt="movie image"/></a>
+            </td> 
+             {% endfor %}
+          </tr>
+          <tr>
+           {% for movie in more_films %}
+          
+            <td>
+              <a href="/film?imdbid={{ movie.imdbid }}">{{ movie.title }}</a>
+            </td>
+              {% endfor %}
+          </tr>
+          
+          <tr>
+              <td>
+                  <div id="home_button">
+                      <a href="/films" >See all films</a>
+                  </div>
+              </td>
+          </tr>
+
+
+         </table>
+     
+         
+         <div id="News">
+         <h3>Film News</h3>
+         <p>The quick scoop on new stories in the world of film.</p>
+         <table id ="News_table">
+         <tr>
+            <td>
+              <p><img src="/static/DjangoNews.jpeg" alt="news picture"/></p>
+            </td>
+            <td>
+              <p>Jamie Foxx to star again in Django Unchained 2.</p>
+            </td>
+         </tr>
+         <tr>
+            <td>
+              <p><img src="/static/Spiderman.jpeg" alt="news picture"/></p>
+            </td>
+            <td>
+              <p>The Amazing Spiderman 2 fills cinemas worldwide. Andrew Garfield and Emma Stone spotted at the Chinese premiere.</p>
+            </td>
+         </tr>
+         <tr>
+            <td>
+              <p><img src="/static/StarWars.jpg" alt="news picture"/></p>
+            </td>
+            <td>
+              <p>Harrisson Ford has outwardly spoken about the Star Wars Episode VII cast reveal.</p>
+            </td>
+         </tr>
+        
+         <tr>
+            <td>
+              <p><img src="/static/StanLee.jpg" alt="news picture"/></p>
+            </td>
+            <td>
+              <p>We sat down with Stan Lee and discussed his favourite creations from the Marvel series.</p>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="2">
+         
+                <p>Call for information and phone bookings on<p>
+                <h2 id ="phone_number">0800 300 7000</h2>
+                <p>Calls cost 5p per minute plus network charges.<p>
+                <p>Book online and save 20% with</p>
+                
+                <img src="/static/gopher.png" alt="logo"/>
+         
+         
+            </td>
+         </tr>
+         </table>
+         </div>
+         
+         
+        <div id ="offers">
+          <a href="/price"><img id = "hungry" src="/static/Advertisement1.png" alt="news picture"/></a>
+        
+        </div>
+                   
+     
+     </div>
+{%include 'footer.html' %}

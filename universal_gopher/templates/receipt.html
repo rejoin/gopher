@@ -1,0 +1,38 @@
+{%include 'header.html' %}
+
+
+<div id="main_body">
+<h2 id="page_title">Receipt</h2>
+
+<h3> Ticket Details </h3>
+<table> 
+  <tr>
+    <td> Movie : {{show.movie}}</td>
+  </tr>
+  <tr>
+    <td> Showtime : {{show.date_time}}</td>
+  </tr>
+  <tr>
+    <td> Number of Tickets : {{tick}}</td>
+  </tr>
+</table>
+<br/>
+<h4> Billing Details </h4>
+<table> 
+  <tr>
+    <td> Customer Name : {{name}}</td>
+  </tr>
+  <tr>
+    <td> Card Number : {{card_no}}</td>
+  </tr>
+  <tr> 
+    <td> Total Price : &pound; {{price}}  </td>
+  </tr> 
+  <tr> 
+    <td id="ref"> Booking Reference : {{order}}  </td>
+  </tr> 
+</table>
+
+<button class="log_b" onclick="javascript:window.print()">Print This Receipt</button>
+</div>
+{%include 'footer.html' %}

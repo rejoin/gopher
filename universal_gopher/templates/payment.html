@@ -1,0 +1,141 @@
+{%include 'header.html' %}
+
+
+
+
+<div id="main_body">
+	<h2 id="page_title"> Card Details </h2>
+	<form  name="payment_details" action="receipt" method="post">
+	<div id="paymentForm">
+	
+		{% csrf_token %}
+			<table>
+				<tr> 
+					<td>         
+						<label for="email"> Enter email </label>
+					</td>
+					<td>
+						<input  class="reg_box" id="email" name="email"  required="required" type="email" placeholder="    Email"/>
+					</td>
+				</tr>
+				<tr>  
+					<td> 
+						<label for="Fname"> Full Name</label>
+					</td>
+					<td>  
+						<input  class="reg_box" id="Fname" name="Fname" required="required" type="text" placeholder="    Full Name"/> 
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p class="paymentHeader">Address</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="Add1"> Address Line 1</label>
+					</td>
+					<td>
+						<input  class="reg_box" id="Add1" name="Add1" required="required" type="text" placeholder="    House number or name"/>
+					</td> 
+				</tr>
+				<tr>
+					<td> 
+						<label for="Add2"> Address Line 2</label>
+					</td> 
+					<td> 
+						<input  class="reg_box" id="Add2" name="Add2" required="required" type="text" placeholder="    Road Name"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="Add3"> Town/City</label>
+					</td>
+					<td>
+						<input  class="reg_box" id="Add3" name="Add3" required="required" type="text" placeholder="    Town or City"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="Add4"> County</label>
+					</td>
+					<td>
+						<input  class="reg_box" id="Add4" name="Add4" required="required" type="text" placeholder="    County"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="Add5"> Post Code</label>
+					</td>
+					<td>
+						<input  class="reg_box" id="Add5" name="Add5" required="required" type="text" placeholder="    Post code"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p class="paymentHeader">Payment Details</p>
+					</td>
+				</tr>
+				<tr>
+					<td class = "label">
+						Card Type
+					</td>
+					<td>
+						<p>
+							<select class="reg_box" name="card_type">
+								<option>Visa</option>
+								<option>Visa Debit/Electron</option>
+								<option>Maestro</option>
+								<option>MasterCard</option>
+								<option>Solo</option>
+								<option>Delta</option>
+								<option>American Express</option>
+							</select>
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td>  
+						<label for="cardNo"> Card Number</label>
+					</td>
+					<td>
+						<input  class="reg_box" id="cardNo" name="cardNo" required="required" type="text" placeholder="    Card Number"/>
+					</td>
+				</tr>
+				<tr> 
+					<td>
+						<label for="cardName">Name on Card</label>
+					</td>
+					<td>
+						<input  class="reg_box" id="cardName" name="cardName" required="required" type="text" placeholder="    Name on card"/>
+					</td>
+				</tr>
+				<tr>  
+					<td class = "label"> 
+						Expiry Date
+					</td>
+					<td>
+						<input class="reg_short" placeholder="YYYY"  required="required" type="number" min="2014" max="2020"/>
+						<input class="reg_short"  placeholder="MM" required="required" type="number" min="1" max="12"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="emailReceipt">Email me my receipt</label>
+					</td>
+					<td>
+						<input type="checkbox" name="emailReceipt" id="emailReceipt" value="emailReceipt"/>
+					</td>
+				</tr>
+			</table>
+
+   	
+
+	</div>
+	{%include 'sidebar.html' %}
+	    </form>
+	
+</div>    
+    
+
+{%include 'footer.html' %}

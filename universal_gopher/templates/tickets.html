@@ -1,0 +1,155 @@
+{%include 'header.html' %}
+
+<div id="main_body">
+<h2 id="page_title"> My Tickets </h2>
+
+<form name ="Ticket Form" action="seating" method="post"> 
+{% csrf_token %}
+
+<table id="ticket_table">
+<thead>
+  <tr>
+  <th> Ticket Type</th>
+  <th> Standard Seats </th>
+  <th> VIP Seats </th>
+  </tr>
+</thead>
+<tr>
+  <td>Adult   :</td>
+  <td> <select name="as" onchange="ticTotal()">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          </select>
+        &pound;7.00   
+   </td>
+   <td><select name ="av" onchange="ticTotal()"> 
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          </select> 
+          &pound;9.00
+  </td>
+</tr>
+<tr>
+  <td>Child   : </td>
+  <td><select name="cs" onchange="ticTotal()"> 
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          </select>
+          &pound;5.00
+  </td>
+  <td><select name="cv" onchange="ticTotal()"> 
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          </select> 
+          &pound;6.00
+  </td>
+</tr>
+<tr>
+  <td>Senior  : </td>
+  <td><select name="os" onchange="ticTotal()"> 
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          </select> 
+          &pound;6.00
+  </td>
+    <td><select name="ov" onchange="ticTotal()"> 
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          </select> 
+          &pound;7.00
+  </td>
+</tr>
+<tr>
+  <td> Student : </td>
+  <td><select name="ss" onchange="ticTotal()"> 
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          </select>
+          &pound;6.00
+  </td>
+  <td><select name="sv" onchange="ticTotal()"> 
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          </select> 
+          &pound;7.50
+  </td>
+</tr>
+<tr>
+  <td> Teen    : </td>
+  <td><select name="ts" onchange="ticTotal()"> 
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          </select>
+          &pound;5.50
+  </td>
+  <td><select name="tv" onchange="ticTotal()"> 
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          </select> 
+          &pound;7.00
+  </td>
+</tr>
+
+
+
+
+</table>
+ {%include 'sidebar.html' %} 
+
+</form>
+</div>
+
+
+{%include 'footer.html' %}
+
+

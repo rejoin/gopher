@@ -1,0 +1,46 @@
+{%include 'header.html' %}
+<div id="main_body">
+		<h2 id="page_title">Films Showing at Gopher Films</h2>
+        
+<div id ="filtering">
+
+<form class="auto-submit" name="form-film-order" method="get" action="/films">
+            <label id="sort_label">
+                Order the list of films by:
+            </label><br>
+            {% for item in col %}
+               <input type="radio" class="filter_button" name="sortby" value="{{item}}" >{{item}}<br>
+            {% endfor %}
+            <button class="action_primary" type="submit" name="go" data-nojavascript="true">Go</button>
+        </form>
+
+</div>
+
+
+<table id="films_table">
+{% for movie in queryset %}
+    <tr class="rowBorder">
+    <td>
+    <a href="/film?imdbid={{ movie.imdbid }}"><img class="cover" src="{{ movie.image }}" alt="{{movie.title}} cover"/></a>
+    </td>
+    <td>
+    <ul>
+        <li><a href="/film?imdbid={{ movie.imdbid }}">{{ movie.title }}</a></li>
+        <li class="rating_pic" >Age Rating: <img src="/static/{{movie.cert}}.png" alt="Rating image"/></li>
+        <li>Year: {{ movie.year }}</li>
+        <li>Genre: {{ movie.genre }}</li>
+        <li>IMDB Rating: {{ movie.rating }}/10</li>
+		<li>Duration:{{movie.duration}} minutes</li>
+        <li>Summary: {{movie.plot_outline}}</li>
+       
+        </ul>
+        </td>
+        </tr>
+
+{% endfor %}
+</table>
+
+
+
+</div>
+{%include 'footer.html' %}

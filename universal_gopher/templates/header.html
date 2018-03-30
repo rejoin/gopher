@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head> 
+     <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/gopher.css">
+	<link rel="stylesheet" href="/static/print.css" media="print">
+    <link href='http://fonts.googleapis.com/css?family=Russo+One%7CVarela+Round' rel='stylesheet' type='text/css'>
+	  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript" src="/static/javascript.js"></script>
+		<script type="text/javascript" src="/static/unslider.js"></script>
+        <title> Gopher Films </title>
+    </head>
+    <body>
+	<div id="sign_div">
+		   <p><button class="log_b" id="log_button" type="button">Sign in?</button></p>
+	</div>
+	<div id="logo">
+		<img src="/static/gopher.png" alt="Gopher Films Logo"/>
+	</div>
+    <div id="user">
+      <form method="post" action="login">
+          {% csrf_token %}
+        <p><input class="reg_box" type="text" name="login" value="" placeholder="Username or Email"></p>
+        <p><input class="reg_box" type="password" name="password" value="" placeholder="Password"></p>
+        <p><input class="log_b" type="submit" value="Login" /></p>
+      </form>
+	</div>
+<div id="container">
+    <div class="header">
+        <nav>
+        <ul id="navigation" >
+            <li  id="home" onmouseover="fadein('home');" onmouseout="fadeout('home');"><a href="/"   >Home</a></li>
+            <li  id="films" onmouseover="fadein('films');" onmouseout="fadeout('films');"><a href="films" >Films</a> </li>
+            <li  id="c_s" onmouseover="fadein('c_s');"  onmouseout="fadeout('c_s');"><a href="/coming_soon" >Coming Soon</a> </li> 
+            <li  id="about" onmouseover="fadein('about');" onmouseout="fadeout('about');"><a href="/about" >About Us</a></li> 
+            <li  id="price" onmouseover="fadein('price');" onmouseout="fadeout('price');"><a href="/price" >Prices</a></li>   
+        </ul>
+</nav>
+    </div>
+
+

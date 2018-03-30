@@ -1,0 +1,29 @@
+{%include 'header.html' %}
+	
+
+		<div id="main_body">
+			<h2 id="page_title">Select Seats</h2>
+			
+			<form action="payment" method="post">
+			{% csrf_token %}
+			<table id="seating">
+			
+			
+				{% for seat in seats %}
+					{% if seat|add:"-1"|divisibleby:10 %}<tr><td>{% cycle 'A' 'B' 'C' 'D' 'E' 'F' 'G' 'H' 'I' 'J' %} </td>{% endif %}
+						<td>	
+							<input type='checkbox' name='{{seat}}' value='{{seat}}' id="{{seat}}" class="checkboxes" onchange="VIPChange('{{seat}}')" {% if seat in taken_seats %}checked{% endif %} />
+								<label for="{{seat}}" onmouseout="VIPHoverOut('{{seat}}')" onmouseover="VIPHover('{{seat}}')">{% cycle '1' '2' '3' '4' '5' '6' '7' '8' '9' '10' %}</label>
+						</td>
+	 					<script type="text/javascript">ticked('{{seat}}');</script>
+ 					{% if seat|divisibleby:10 %}</tr>{% endif %}
+			  		
+				{% endfor %}
+		    
+			</table>
+			
+			{%include 'sidebar.html' %} 
+			</form>
+		</div>
+
+{%include 'footer.html' %}

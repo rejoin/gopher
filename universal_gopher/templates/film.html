@@ -1,0 +1,45 @@
+{%include 'header.html' %}
+   
+<div id="main_body">
+    <h2 id="page_title"> {{ film.title }} ( {{ film.year }} )</h2>
+    
+    <div id ="film_details">
+         <a class = "back_button" href="/films">See all films</a>
+          
+    <div id ="image_div">
+    
+        <img id="big_cover" src="{{ film.image}}" alt="{{film.title}} cover"/>
+        
+    </div>
+        
+    <div id="film_list">
+        
+      
+       <ul class="film_info">
+             <li>Duration: {{ film.duration }}</li>
+             <li>Genre: {{ film.genre }}</li>
+             <li class="rating_pic" >Age Rating: <img src="/static/{{ film.cert }}.png" alt="Rating image"/></li>
+             <li>Film Rating: {{ film.rating }}</li>
+       </ul>
+       
+    </div>
+    
+    <div id="plot">
+         <p>
+         {{ film.plot }}
+         </p>
+    </div>
+    
+    <ul class="film_info">
+    
+    {% for item in shows %}
+    <li><a class="time_button" href="/tickets?show_id={{item.id}}" >
+        {{item.date_time.date}}; {{item.date_time.time}}; Room {{item.room_no}}</a></li>
+    {% endfor %}
+    </ul>
+    
+</div>
+
+</div>
+
+{%include 'footer.html' %}

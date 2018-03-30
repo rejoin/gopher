@@ -1,0 +1,35 @@
+body{
+font-size:20px;
+}
+
+#ref {
+font-size:40px;
+}
+
+td {
+padding: 10px;
+}
+
+h3{
+font-size:30px;
+padding:50px;
+padding-bottom:5px;
+}
+
+h4{
+font-size: 30px;
+padding:50px;
+padding-bottom:5px;
+}
+
+input,#sign_div,#header,#logo,nav,#user,footer, button{
+display:none;
+}
+#container{
+height:600px;
+}
+
+#main_body{
+height:600px;
+}
+

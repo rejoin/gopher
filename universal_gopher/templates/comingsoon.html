@@ -1,0 +1,31 @@
+{%include 'header.html' %}
+<div id="main_body">
+		<h2 id="page_title">Films Showing at Gopher Films</h2>
+        
+
+
+
+<table id="films_table">
+{% for movie in queryset %}
+    <tr class="rowBorder">
+    <td>
+    <img class="cover" src="{{ movie.image }}" alt="movie image"/>
+    </td>
+    <td>
+    <ul>
+        <li>{{ movie.title }}</li>
+        <li>Age Rating: {{movie.cert}}</li>
+        <li>Year: {{ movie.year }}</li>
+        <li>Genre: {{ movie.genre }}</li>
+        <li>IMDB Rating: {{ movie.rating }}/10   Duration:{{movie.duration}} minutes</li>
+        <li>Summary: {{movie.plot_outline}}</li>
+       
+        </ul>
+        </td>
+        </tr>
+
+{% endfor %}
+</table>
+
+</div>
+{%include 'footer.html' %}

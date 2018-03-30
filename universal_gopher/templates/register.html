@@ -1,0 +1,143 @@
+{%include 'header.html' %}
+    <div id="main_body">
+        <form class="register" name="registerForm" method="post">
+			{% csrf_token %}
+            <table>
+				<tr>
+					<td>
+						<label for="username"> Enter username </label>
+					</td>
+					<td>
+						<input  class="reg_box" id="username" name="username" required="required" type="text" placeholder="    Username"/>
+					</td>
+				</tr>
+				<tr> 
+					<td>         
+						<label for="email"> Enter email </label>
+					</td>
+					<td>
+						<input  class="reg_box" id="email" name="email"  required="required" type="email" placeholder="    Email"/>
+					</td>
+				</tr>
+				<tr> 
+					<td>         
+						<label for="password"> Enter password </label>
+					</td>
+					<td>
+						<input  class="reg_box" id="password" name="password"  required="required" type="password" placeholder="    Password"/>
+					</td>
+				</tr>
+				<tr>
+					<td> 
+						<label for="repassword"> Re-enter password </label>
+					</td>
+					<td> 
+						<input  class="reg_box" id="repassword" name="repassword"   required="required" type="password" placeholder="    Re-enter password"/> 
+					</td>
+				</tr>
+				<tr>  
+					<td> 
+						<label for="Fname"> Full Name</label>
+					</td>
+					<td>  
+						<input  class="reg_box" id="Fname" name="Fname" required="required" type="text" placeholder="    Full Name"/> 
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p class="paymentHeader">Address</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="Add1"> Address Line 1</label>
+					</td>
+					<td>
+						<input  class="reg_box" id="Add1" name="Add1" required="required" type="text" placeholder="    House number or name"/>
+					</td> 
+				</tr>
+				<tr>
+					<td> 
+						<label for="Add2"> Address Line 2</label>
+					</td> 
+					<td> 
+						<input  class="reg_box" id="Add2" name="Add2" required="required" type="text" placeholder="    Road Name"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="Add3"> Town/City</label>
+					</td>
+					<td>
+						<input  class="reg_box" id="Add3" name="Add3" required="required" type="text" placeholder="    Town or City"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="Add4"> County</label>
+					</td>
+					<td>
+						<input  class="reg_box" id="Add4" name="Add4" required="required" type="text" placeholder="    County"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="Add5"> Post Code</label>
+					</td>
+					<td>
+						<input  class="reg_box" id="Add5" name="Add5" required="required" type="text" placeholder="    Post code"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p class="paymentHeader">Payment Details</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="card_type"> Card Type </label>
+					</td>
+					<td>
+						<p>
+							<select class="reg_box" name="card_type">
+								<option>Visa</option>
+								<option>Visa Debit/Electron</option>
+								<option>Maestro</option>
+								<option>MasterCard</option>
+								<option>Solo</option>
+								<option>Delta</option>
+								<option>American Express</option>
+							</select>
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td>  
+						<label for="cardNo"> Card Number</label>
+					</td>
+					<td>
+						<input  class="reg_box" id="cardNo" name="cardNo" required="required" type="text" placeholder="    Card Number"/>
+					</td>
+				</tr>
+				<tr> 
+					<td>
+						<label for="cardName">Name on Card</label>
+					</td>
+					<td>
+						<input  class="reg_box" id="cardName" name="cardName" required="required" type="text" placeholder="    Name on card"/>
+					</td>
+				</tr>
+				<tr>  
+					<td> 
+						<label for="Exp">Expiry Date</label>
+					</td>
+					<td>
+						<input class="reg_box" id="Exp" name="Exp" required="required" type="date"/>
+					</td>
+				</tr>
+			</table>
+			<input type="Submit" value="post form" onClick="return check_password();">
+  
+		</form>
+	</div>
+{%include 'footer.html' %}

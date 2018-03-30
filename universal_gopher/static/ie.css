@@ -1,0 +1,3 @@
+#header li ul { display: none; }
+#header li:hover ul, #header li.over ul {display: block; }
+#header li ul li { height: 30px; line-height: 30px; }
