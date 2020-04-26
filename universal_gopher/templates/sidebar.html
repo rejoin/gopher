@@ -6,11 +6,11 @@
 		<li> {{ movie.title }} <br/> <img class="cover" src="{{ movie.image}}" alt="{{movie.title}} cover"/> </li>
 		<li> Screen: {{room}}  </li>
 		
-		{% if current_path = "/tickets" %}
+		{% if current_path == "/tickets" %}
 		<input class="log_b" id="cont" type="submit" value="Continue" disabled/>
 		{% endif %}
 		
-		{% if current_path = "/seating" %}
+		{% if current_path == "/seating" %}
     	{% if ss > 0 %}
 		<li>Standard Seats: <span id="n_seats">0</span>  / {{ss}}</li>
 		{% endif %}
@@ -21,7 +21,7 @@
 		<li id="pay_button"> <input type="submit" id="seat_cont" class="log_b" value="Continue" disabled> </li>
 		{% endif %}
 
-		{% if current_path  = "/payment" %}
+		{% if current_path  == "/payment" %}
 		<li>Seats:<br/>
 		{% for seat in seats %}
 		{{seat}}<br/>

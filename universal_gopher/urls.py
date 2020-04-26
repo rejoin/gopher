@@ -1,22 +1,24 @@
-from django.conf.urls import patterns, include, url
+# from django.conf.urls import patterns, include, url
+from django.conf.urls import url, include
 from universal_gopher import views
 
-urlpatterns = patterns('universal_gopher.views',
-    url(r'^$', 'index'),
-    url(r'^home', 'index'),
-    url(r'^films', 'films'),
-    url(r'^film', 'film'),
-    url(r'^coming_soon', 'coming_soon'),
-    url(r'^about', 'about'),
-    url(r'^login', 'index'),
-    url(r'^logout', 'index'),
-    url(r'^seating', 'seating'),
-    url(r'^price', 'price'),
-    url(r'^payment', 'payment'),
-    url(r'^receipt', 'receipt'),
-    url(r'^register', 'register'),
-    url(r'^tickets', 'tickets')
+# urlpatterns = patterns('universal_gopher.views',
+urlpatterns = [
+    url(r'^$', views.index, name='index'),
+    url(r'^home', views.index, name='index'),
+    url(r'^films', views.films, name='films'),
+    url(r'^film', views.film, name='film'),
+    url(r'^coming_soon', views.coming_soon, name='coming_soon'),
+    url(r'^about', views.about, name='about'),
+    url(r'^login', views.login, name='index'),
+    url(r'^logout', views.logout, name='index'),
+    url(r'^seating', views.seating, name='seating'),
+    url(r'^price', views.price, name='price'),
+    url(r'^payment', views.payment, name='payment'),
+    url(r'^receipt', views.receipt, name='receipt'),
+    url(r'^register', views.register, name='register'),
+    url(r'^tickets', views.tickets, name='tickets')
    
-)
+]
 
-handler404 = "universal_gopher.views.handler404"
+# handler404 = "universal_gopher.views.handler404"

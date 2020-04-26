@@ -1,3 +1,7 @@
+# from django.db import models
+
+# Create your models here.
+
 from django.db import models
 from django import forms
 from django.contrib.auth.models import User
@@ -14,7 +18,7 @@ class Movie(models.Model):
     duration = models.CharField(max_length=100)
     country = models.CharField(max_length=200)
     year = models.IntegerField()
-    image = models.CharField(max_length=100)
+    image = models.CharField(max_length=300)
     
     def __str__(self):
          return self.title
@@ -27,7 +31,7 @@ class Room(models.Model):
 
 class Seat(models.Model):
     seat_no = models.IntegerField()
-    room_no = models.ForeignKey(Room, to_field="room_no")
+    room_no = models.ForeignKey(Room, on_delete=models.CASCADE, to_field="room_no")
     type_multiplier = models.FloatField()
     
     def __str__(self):
@@ -44,9 +48,9 @@ class Seat(models.Model):
         unique_together = ("room_no", "seat_no")
 
 class Show(models.Model):
-    movie = models.ForeignKey(Movie)
+    movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
     date_time = models.DateTimeField()
-    room_no = models.ForeignKey(Room, to_field="room_no")
+    room_no = models.ForeignKey(Room, on_delete=models.CASCADE, to_field="room_no")
 
     class Meta:
         unique_together = (("room_no", "date_time", "movie"),)
@@ -56,8 +60,8 @@ class Show(models.Model):
 
 class Booking(models.Model):
     # TODO change to seat
-    seat_no = models.ForeignKey(Seat)
-    show = models.ForeignKey(Show)
+    seat_no = models.ForeignKey(Seat, on_delete=models.CASCADE)
+    show = models.ForeignKey(Show, on_delete=models.CASCADE)
 
     def __str__(self):
         return str(self.show) + " | " + str(self.seat_no)
@@ -73,7 +77,7 @@ class Ticket_Type(models.Model):
         return str(self.name) + " " + str(self.price)
 
 class Customer(models.Model):
-    username = models.OneToOneField(User)
+    username = models.OneToOneField(User, on_delete=models.CASCADE)
     full_name = models.CharField(max_length=100)
     address_1 = models.CharField(max_length=100)
     address_2 = models.CharField(max_length=100)
@@ -88,10 +92,10 @@ class Customer(models.Model):
         return str(self.username)
     
 class Receipt(models.Model):
-    title = models.ForeignKey(Movie, to_field="title")
-    booking = models.ForeignKey(Booking)
+    title = models.ForeignKey(Movie, on_delete=models.CASCADE, to_field="title")
+    booking = models.ForeignKey(Booking, on_delete=models.CASCADE)
     price_paid = models.FloatField()
-    username = models.ForeignKey(Customer)
+    username = models.ForeignKey(Customer, on_delete=models.CASCADE)
     card_number = models.CharField(max_length=16)
 
     def __str__(self):
