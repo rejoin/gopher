@@ -12,12 +12,15 @@ Team members:   Karolis Velicka
 
 A cinema website made using django.
 
-Usage:
+You can either run Django on your local machine, or in a Docker container via Docker Compose.
 
-1. unzip gopher.zip
-2. cd project_gopher
-3. python3 manage.py runserver
-4. http://localhost:8000
+To run locally:
+1. python3 manage.py runserver
+2. Open http://localhost:8000 in your browser
+
+To run in a Docker container:
+1. docker-compose up
+2. Open http://localhost:8000 in your browser
 
 The project comes with a database with an array of added movies and screenings.
 The controls and layout are similar to most commercial cinema websites'.
